@@ -269,3 +269,8 @@ console.log(ScooterApp.stations);
 
 ScooterApp.print();
 console.log(ScooterApp.stations);
+
+/*ABOVE IS TESTED INTERACTIONS // DIDN'T KNOW IF I SHOULD DELETE EVERYTHING OUTSIDE THE CLASS
+(I KNOW THIS WILL BE EXPORTED ASWELL BUT GIVES YOU THE ABILITY TO RUN THIS SPECIFICALLY AND SEE FINAL INTERACTION)
+If you want to delete all the console.log go ahead but to see what the final output /print would be I don't recommend 
+*/
