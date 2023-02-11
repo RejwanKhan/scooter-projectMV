@@ -1,25 +1,39 @@
-const Scooter = require('../src/Scooter')
-const User = require('../src/User')
+const Scooter = require("../src/Scooter");
+const User = require("../src/User");
 
-//typeof scooter === object
-describe('scooter object', () => {
-  test('does something', () => {
-    // edit this to be a real test!
-    expect(false).toEqual(true);
-  }
-)
-})
+beforeEach(() => {
+  Scooter.nextSerial = 1;
+});
 
-//Method tests
-describe('scooter methods', () => {
-  // tests here!
+describe("testing Properties of Scooter", () => {
+  it("testing if an insttance has correct properties of Scooter", () => {
+    const scooter1 = new Scooter("Camden");
+    expect(scooter1).toHaveProperty("station");
+    expect(scooter1).toHaveProperty("user");
+    expect(scooter1).toHaveProperty("serial");
+    expect(scooter1).toHaveProperty("charge");
+    expect(scooter1).toHaveProperty("isBroken");
+  });
 
-  //rent method
+  it("testing if Scooter Class has static property nextSerial", () => {
+    expect(Scooter).toHaveProperty("nextSerial");
+  });
+});
 
-  //dock method
+describe("testing whether Scooter instances has correct Method", () => {
+  const scooter2 = new Scooter("Islington");
+  expect(scooter2).toHaveProperty("rent");
+  expect(scooter2).toHaveProperty("dock");
+  expect(scooter2).toHaveProperty("recharge");
+  expect(scooter2).toHaveProperty("requestRepair");
+});
 
-  //requestRepair method
-
-  //charge method
-
-})
+describe("tesiting if new scooter instance assigned to correct values", () => {
+  const scooter3 = new Scooter("Camden");
+  expect(scooter3).toHaveProperty("station", "Camden");
+  expect(scooter3).toHaveProperty("user", null);
+  expect(scooter3).toHaveProperty("serial").toBe(2);
+  expect(Scooter.nextSerial).toBe(1);
+  expect(scooter3.charge).toBe(100);
+  expect(scooter3.isBroken).toBeFalsy();
+});
