@@ -10,7 +10,7 @@ class Scooter {
   rent() {
     if (this.charge > 20 && this.isBroken === false) {
       this.station = null;
-      this.station = USER; //USER NEEDS TO USE PARAMATER FROM SCOOTER APP
+      this.station = this.user; //USER NEEDS TO USE PARAMATER FROM SCOOTER APP
     }
   }
   dock(Station) {
