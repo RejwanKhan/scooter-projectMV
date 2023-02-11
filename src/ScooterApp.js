@@ -129,7 +129,7 @@ class ScooterApp {
       ScooterApp.stations[findStation][station].indexOf(scooter);
 
     ScooterApp.stations[findStation][station].splice(findScooterInStation, 1);
-
+    scooter.rent();
     scooter.station = null;
     scooter.user = user;
   }
@@ -245,6 +245,7 @@ ScooterApp.createScooter("Islington");
 const fix = new Scooter("Islington");
 console.log(ScooterApp.stations);
 console.log(ScooterApp.stations[2], "dsada");
+
 // ScooterApp.stations[2].push(fix);
 // console.log(ScooterApp.stations[2].Islington.push(fix));
 
@@ -263,7 +264,9 @@ console.log(ScooterApp.stations);
 
 const stationa = "Islington";
 console.log(ScooterApp.stations[2][stationa].includes(fix));
-
+console.log(fix.charge, "21321");
+fix.charge = 19;
+console.log(fix.charge, "1232121");
 ScooterApp.rentScooter(fix, "besty");
 console.log(ScooterApp.stations);
 

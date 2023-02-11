@@ -7,10 +7,15 @@ class Scooter {
     this.charge = 100;
     this.isBroken = false;
   }
+  // rent() {
+  //   if (this.charge > 20 && this.isBroken === false) {
+  //     this.station = null;
+  //     this.station = this.user; //USER NEEDS TO USE PARAMATER FROM SCOOTER APP
+  //   }
+  // }
   rent() {
-    if (this.charge > 20 && this.isBroken === false) {
-      this.station = null;
-      this.station = this.user; //USER NEEDS TO USE PARAMATER FROM SCOOTER APP
+    if (this.charge < 20 || this.isBroken === true) {
+      throw new Error("cannot be rented");
     }
   }
   dock(Station) {
