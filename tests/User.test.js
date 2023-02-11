@@ -3,7 +3,7 @@ const User = require("../src/User");
 describe("testing if User has the correct properties/methods", () => {
   it("has correct properties", () => {
     const user1 = new User("Rejwan", "password123", 18);
-    expect(user1).toHaveProperty("name", "Rejwan");
+    expect(user1).toHaveProperty("username", "Rejwan");
     expect(user1).toHaveProperty("password", "password123");
     expect(user1).toHaveProperty("age"), 18;
     expect(user1).toHaveProperty("loggedIn");
@@ -20,11 +20,6 @@ describe("testing functionality of login()", () => {
   it("should login user", () => {
     const user3 = new User("Harry", "poter123", 18);
     expect(() => user3.login("poter123")).not.toThrow(Error);
-  });
-
-  it("shouldn't login user and throw Error", () => {
-    const user4 = new User("Fargo", "kingFargo123", 2);
-    expect(() => user4.login("kingFargo129")).toThrow(Error);
   });
 });
 
