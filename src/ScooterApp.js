@@ -62,6 +62,7 @@ class ScooterApp {
   }
 
   static createScooter(station) {
+    Scooter.nextSerial++;
     const allStations = ScooterApp.stations.flatMap((item) =>
       Object.keys(item)
     );
