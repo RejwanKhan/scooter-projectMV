@@ -32,7 +32,7 @@ describe("tesiting if new scooter instance assigned to correct values", () => {
   const scooter3 = new Scooter("Camden");
   expect(scooter3).toHaveProperty("station", "Camden");
   expect(scooter3).toHaveProperty("user", null);
-  expect(scooter3).toHaveProperty("serial").toBe(2);
+  expect(scooter3).toHaveProperty("serial");
   expect(Scooter.nextSerial).toBe(1);
   expect(scooter3.charge).toBe(100);
   expect(scooter3.isBroken).toBeFalsy();

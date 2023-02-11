@@ -76,15 +76,6 @@ class ScooterApp {
     }
   }
 
-  //   dockScooter(scooter, station)
-
-  // Add the scooter to the station’s scooter list, and dock it.
-
-  // Log scooter is docked to the console.
-
-  // Throws no such station error if the station does not exist.
-
-  // Throws scooter already at station error if the scooter is already there.
   static dockScooter(scooter, station) {
     const allStations = ScooterApp.stations.flatMap((item) =>
       Object.keys(item)
@@ -264,9 +255,9 @@ console.log(ScooterApp.stations);
 
 const stationa = "Islington";
 console.log(ScooterApp.stations[2][stationa].includes(fix));
-console.log(fix.charge, "21321");
-fix.charge = 19;
-console.log(fix.charge, "1232121");
+// console.log(fix.charge, "21321");
+// fix.charge = 19;
+// console.log(fix.charge, "1232121");
 ScooterApp.rentScooter(fix, "besty");
 console.log(ScooterApp.stations);
 
