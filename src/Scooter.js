@@ -48,3 +48,12 @@ class Scooter {
 }
 
 module.exports = Scooter;
+
+// const sc1 = new Scooter("Camden");
+// sc1.charge = 19;
+// sc1.isBroken = true;
+// console.log(sc1);
+// setInterval(() => console.log(sc1), 10000);
+// sc1.requestRepair();
+
+// sc1.recharge();
