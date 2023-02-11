@@ -1,6 +1,45 @@
-class Scooter{
-  // scooter code here
+class Scooter {
+  static nextSerial = 1;
+  constructor(station) {
+    this.station = station;
+    this.user = null;
+    this.serial = Scooter.nextSerial + 1;
+    this.charge = 100;
+    this.isBroken = false;
+  }
+  rent() {
+    if (this.charge > 20 && this.isBroken === false) {
+      this.station = null;
+      this.station = USER; //USER NEEDS TO USE PARAMATER FROM SCOOTER APP
+    }
+  }
+  dock(Station) {
+    this.station = Station;
+    this.user = null;
+  }
+
+  recharge() {
+    const recharge = setInterval(() => {
+      if (this.charge < 100) {
+        this.charge++;
+        console.log(`The battery is currently at ${this.charge}%`);
+      } else {
+        clearInterval(recharge);
+      }
+    }, 1000);
+  }
+
+  requestRepair() {
+    setInterval(() => {
+      this.isBroken = false;
+      console.log("repair completed");
+    }, 5000);
+  }
+  //   rent()
+
+  // If the Scooter is charged above 20% and not broken, remove it from its station, check it out to user.
+
+  // Otherwise, throw an error scooter needs to charge or scooter needs repair.
 }
 
-
-module.exports = Scooter
+module.exports = Scooter;
